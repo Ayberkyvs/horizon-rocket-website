@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CustomFont';
+  font-style: normal;
+  font-weight: normal;
+  src: local('CustomFont'), url('./fonts/Spacex.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'D-DIN';
+  font-style: normal;
+  font-weight: normal;
+  src: local('D-DIN'), url('./fonts/D-DIN-Bold.otf') format('truetype');
+}
+
+@layer base {
+  :root {
+    --text: #0f1115;
+    --text-50: #f0f2f4;
+    --text-100: #e1e4ea;
+    --text-200: #c3c9d5;
+    --text-300: #a5aec0;
+    --text-400: #8893aa;
+    --text-500: #6a7895;
+    --text-600: #556077;
+    --text-700: #3f485a;
+    --text-800: #2a303c;
+    --text-900: #15181e;
+    --text-950: #0b0c0f;
+    
+    --header-background: rgba(245, 247, 250, 0.85);
+    --background: #f5f7fa;
+    --background-50: #eef1f6;
+    --background-100: #dde4ee;
+    --background-200: #bbc9dd;
+    --background-300: #99adcc;
+    --background-400: #7792bb;
+    --background-500: #5577aa;
+    --background-600: #445f88;
+    --background-700: #334766;
+    --background-800: #223044;
+    --background-900: #111822;
+    --background-950: #090c11;
+    
+    --primary: #102142;
+    --primary-50: #eaf0fa;
+    --primary-100: #d6e0f5;
+    --primary-200: #adc2eb;
+    --primary-300: #84a3e1;
+    --primary-400: #5b84d7;
+    --primary-500: #3266cd;
+    --primary-600: #2851a4;
+    --primary-700: #1e3d7b;
+    --primary-800: #142952;
+    --primary-900: #0a1429;
+    --primary-950: #050a15;
+    
+    --secondary: #8ba9e5;
+    --secondary-50: #eaf0fa;
+    --secondary-100: #d5e0f6;
+    --secondary-200: #acc1ec;
+    --secondary-300: #82a2e3;
+    --secondary-400: #5984d9;
+    --secondary-500: #2f65d0;
+    --secondary-600: #2651a6;
+    --secondary-700: #1c3c7d;
+    --secondary-800: #132853;
+    --secondary-900: #09142a;
+    --secondary-950: #050a15;
+    
+    --accent: #5385ea;
+    --accent-50: #e8effc;
+    --accent-100: #d2dff9;
+    --accent-200: #a4bff4;
+    --accent-300: #779fee;
+    --accent-400: #497ee9;
+    --accent-500: #1c5ee3;
+    --accent-600: #164bb6;
+    --accent-700: #113988;
+    --accent-800: #0b265b;
+    --accent-900: #06132d;
+    --accent-950: #030917;
+    
+  }
+  .dark {
+    --text: #eaecf0;
+    --text-50: #0b0c0f;
+    --text-100: #15181e;
+    --text-200: #2a303c;
+    --text-300: #3f485a;
+    --text-400: #556077;
+    --text-500: #6a7895;
+    --text-600: #8893aa;
+    --text-700: #a5aec0;
+    --text-800: #c3c9d5;
+    --text-900: #e1e4ea;
+    --text-950: #f0f2f4;
+    
+    --header-background: rgba(5, 7, 10, 0.85);
+    --background: #05070a;
+    --background-50: #090c11;
+    --background-100: #111822;
+    --background-200: #223044;
+    --background-300: #334766;
+    --background-400: #445f88;
+    --background-500: #5577aa;
+    --background-600: #7792bb;
+    --background-700: #99adcc;
+    --background-800: #bbc9dd;
+    --background-900: #dde4ee;
+    --background-950: #eef1f6;
+    
+    --primary: #bdceef;
+    --primary-50: #050a15;
+    --primary-100: #0a1429;
+    --primary-200: #142952;
+    --primary-300: #1e3d7b;
+    --primary-400: #2851a4;
+    --primary-500: #3266cd;
+    --primary-600: #5b84d7;
+    --primary-700: #84a3e1;
+    --primary-800: #adc2eb;
+    --primary-900: #d6e0f5;
+    --primary-950: #eaf0fa;
+    
+    --secondary: #1a3874;
+    --secondary-50: #050a15;
+    --secondary-100: #09142a;
+    --secondary-200: #132853;
+    --secondary-300: #1c3c7d;
+    --secondary-400: #2651a6;
+    --secondary-500: #2f65d0;
+    --secondary-600: #5984d9;
+    --secondary-700: #82a2e3;
+    --secondary-800: #acc1ec;
+    --secondary-900: #d5e0f6;
+    --secondary-950: #eaf0fa;
+    
+    --accent: #1548ac;
+    --accent-50: #030917;
+    --accent-100: #06132d;
+    --accent-200: #0b265b;
+    --accent-300: #113988;
+    --accent-400: #164bb6;
+    --accent-500: #1c5ee3;
+    --accent-600: #497ee9;
+    --accent-700: #779fee;
+    --accent-800: #a4bff4;
+    --accent-900: #d2dff9;
+    --accent-950: #e8effc;
+    
+  }
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Oswald', sans-serif !important;
+    font-weight: 400;
+    background-color: var(--background);
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--accent);
+}
+
+.countdown {
+  background-image: url("./assets/background/space.webp");
+  background-size: cover;
+  background-position: center;
+}
+.hero {
+  background-image: url("./assets/background/birlesik-uzay.webp");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.team {
+  background-image: url("./assets/background/group-photo.webp");
+  background-size: cover;
+  background-position: center;
+}
+.navbar--text{
+  font-family: 'D-DIN', 'Oswald', sans-serif;
+}
+.header--logotext {
+  font-family: 'CustomFont' !important;
+}
+.hero--text {
+  color: var(--text);
+  font-family: 'D-DIN', 'Oswald', sans-serif;
+}
+.heading-element {
+  color: var(--text);
+  font-family: 'D-DIN', 'Oswald', sans-serif;
+}
+.oursponsors {
+  background: url("./assets/background/space.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
